@@ -24,7 +24,6 @@ export default function SimpleExpansionPanel() {
       <ExpansionPanel>
         <ExpansionPanelSummary
           expandIcon={<ExpandMoreIcon />}
-          expandIconPosition="left"
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
