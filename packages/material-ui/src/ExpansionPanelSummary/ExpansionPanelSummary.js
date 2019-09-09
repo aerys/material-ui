@@ -191,7 +191,7 @@ ExpansionPanelSummary.propTypes = {
   /**
    * The position of the expand icon.
    */
-  expandIconPosition: PropTypes.oneOf(['start', 'end', undefined]),
+  expandIconPosition: PropTypes.oneOf(['right', 'left']),
   /**
    * Props applied to the `IconButton` element wrapping the expand icon.
    */
