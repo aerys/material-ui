@@ -21,6 +21,10 @@ and `id` for the content region of the panel.
 
 {{"demo": "pages/components/expansion-panels/SimpleExpansionPanel.js"}}
 
+The `expandIcon` can be left aligned with the prop `expandIconPosition`.
+
+{{"demo": "pages/components/expansion-panels/LeftAlignedExpandIconExpansionPanel.js"}}
+
 ## Controlled Accordion
 
 Extend the default panel behavior to create an accordion with the `ExpansionPanel` component.
