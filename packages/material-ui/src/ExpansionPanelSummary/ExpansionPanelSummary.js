@@ -130,7 +130,7 @@ const ExpansionPanelSummary = React.forwardRef(function ExpansionPanelSummary(pr
           className={clsx(classes.expandIcon, {
             [classes.expanded]: expanded,
           })}
-          edge="end"
+          edge="start"
           component="div"
           tabIndex={-1}
           aria-hidden
