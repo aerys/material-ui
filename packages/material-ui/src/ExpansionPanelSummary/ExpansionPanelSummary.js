@@ -70,6 +70,7 @@ const ExpansionPanelSummary = React.forwardRef(function ExpansionPanelSummary(pr
     disabled = false,
     expanded,
     expandIcon,
+    expandIconPosition,
     IconButtonProps,
     onBlur,
     onChange,
@@ -124,8 +125,21 @@ const ExpansionPanelSummary = React.forwardRef(function ExpansionPanelSummary(pr
       ref={ref}
       {...other}
     >
+      {expandIcon && expandIconPosition === 'left' && (<IconButton
+          disabled={disabled}
+          className={clsx(classes.expandIcon, {
+            [classes.expanded]: expanded,
+          })}
+          edge="end"
+          component="div"
+          tabIndex={-1}
+          aria-hidden
+          {...IconButtonProps}
+        >
+          {expandIcon}
+        </IconButton>) }
       <div className={clsx(classes.content, { [classes.expanded]: expanded })}>{children}</div>
-      {expandIcon && (
+      {expandIcon && (expandIconPosition === undefined || expandIconPosition === 'right') && (
         <IconButton
           disabled={disabled}
           className={clsx(classes.expandIcon, {
@@ -172,6 +186,10 @@ ExpansionPanelSummary.propTypes = {
    * The icon to display as the expand indicator.
    */
   expandIcon: PropTypes.node,
+  /**
+   * The icon to display as the expand indicator.
+   */
+  expandIconPosition: PropTypes.string,
   /**
    * Props applied to the `IconButton` element wrapping the expand icon.
    */
