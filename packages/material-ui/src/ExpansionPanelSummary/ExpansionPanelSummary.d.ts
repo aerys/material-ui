@@ -8,7 +8,7 @@ declare const ExpansionPanelSummary: ExtendButtonBase<{
     disabled?: boolean;
     expanded?: boolean;
     expandIcon?: React.ReactNode;
-    expandIconPosition?: string;
+    expandIconPosition?: 'left' | 'right';
     IconButtonProps?: Partial<IconButtonProps>;
     onChange?: React.ReactEventHandler<{}>;
   };
